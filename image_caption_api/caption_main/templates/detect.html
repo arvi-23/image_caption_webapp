@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <style>
+  .hi
+  {
+    text-align: center;
+    color:chartreuse;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+ </style>
+    <div class="hi">
+      <br>
+      <br>
+      <h1>IMAGE CAPTIONING USING INCEPTION V3 AND LSTM</h1>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <form action = "http://127.0.0.1:5000/predict" method = "post" enctype="multipart/form-data">  
+        <input type="file" name="file" placeholder="Upload" >
+        <br>
+        <input type = "submit" value="Upload">  
+        <br>
+        <br>
+        <br>
+        <img src="{{ url_for('static', filename= task1) }}" alt="Italian Trulli" width="300" height="300">
+        <br>
+        <br>
+        <h1>
+          {{tasks}}
+        </h1>
+      </form>
+    </div>
+</body>
+</html>
